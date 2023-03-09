@@ -3,7 +3,7 @@
 #include<algorithm>
 using namespace std;
 
-int findFirtsOccurance(int arr[], int size, int target){
+int findLastOccurance(int arr[], int size, int target){
     int s = 0;
     int e = size - 1;
     int mid = s + (e-s) / 2;
@@ -39,11 +39,16 @@ int main(){
     // int size = arr.size();
     int size = sizeof(arr)/sizeof(int);
     int target = 33;
-    int isFound = findFirtsOccurance(arr, size, target);
+    int isFound = findLastOccurance(arr, size, target);
     if(isFound == -1){
         cout<<"Element "<< target<<" is not found"<<endl;
     }
     else{
         cout<<"Last occurance of element "<<target<<" found at index " << isFound<<endl;
     }
+
+    // int high = upper_bound(arr, arr+size, target) - arr;
+    // cout<<high<<endl;
+
+    // STL function upper_bound(v.begin(), v.end(), target)
 }

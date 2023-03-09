@@ -31,7 +31,7 @@ int main(){
     int arr[] = {1,2,3,4,5,6,7,8};
     // int size = arr.size();
     int size = sizeof(arr)/sizeof(int);
-    int target = 55;
+    int target = 1;
     int isFound = binarySearch(arr, size, target);
     if(isFound == -1){
         cout<<"Element "<< target<< " is not found"<<endl;
@@ -39,4 +39,15 @@ int main(){
     else{
         cout<<"Element "<<target<<" found at index "<<isFound<<endl;
     }
+
+    // we have STL binary search function
+    if(binary_search(arr, arr+size, target)){
+        cout<<"found"<<endl;
+    }
+    else{
+        cout<<"not found"<<endl;
+    }
+
+    // if vector is there
+    // binary_search(v.begin(), v.end(), target);
 }
