@@ -15,7 +15,7 @@ int findFirtsOccurance(int arr[], int size, int target){
         // found element and storing it's index to ans and searching in left of it.
         if(target == arr[mid]){
             ans = mid;
-            e = mid - 1;
+            s = mid + 1;
         }
         else if(target < arr[mid]){
             // searching in left
@@ -38,12 +38,12 @@ int main(){
     int arr[] = {1,2,3,3,3,3,3,4,4,4,5,6,6,6,6,7,8};
     // int size = arr.size();
     int size = sizeof(arr)/sizeof(int);
-    int target = 6;
+    int target = 33;
     int isFound = findFirtsOccurance(arr, size, target);
     if(isFound == -1){
         cout<<"Element "<< target<<" is not found"<<endl;
     }
     else{
-        cout<<"First occurance of element "<<target<<" found at index " << isFound<<endl;
+        cout<<"Last occurance of element "<<target<<" found at index " << isFound<<endl;
     }
 }
