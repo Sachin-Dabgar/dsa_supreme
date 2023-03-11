@@ -37,7 +37,7 @@ int findPivot(int arr[], int size){
 }
 
 int main(){
-    int arr[] = {10,2,3,4,5,6,7,8,9};
+    int arr[] = {11,12,13,17};
     int size = sizeof(arr)/sizeof(int);
 
     int element = findPivot(arr, size);
