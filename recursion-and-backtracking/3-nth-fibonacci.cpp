@@ -13,7 +13,6 @@ int fib(int n){
         // second term
         return 1;
     }
-
     // RR f(n) = f(n-1) + f(n-2);
     int ans = fib(n-1) + fib(n-2);
     return ans;
